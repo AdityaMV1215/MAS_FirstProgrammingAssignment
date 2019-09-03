@@ -43,6 +43,14 @@ public class loginsuccess extends AppCompatActivity {
                 startActivity(views);
             }
         });
+
+        Button viewaverage = (Button) findViewById(R.id.averagescore);
+        viewaverage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(views);
+            }
+        });
     }
 
     @Override
