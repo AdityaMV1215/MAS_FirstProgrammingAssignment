@@ -24,6 +24,7 @@ public class loginsuccess extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         final Intent quiz = new Intent(this, com.example.firstprogrammingassignment.quiz.class);
         final Intent views = new Intent(this, viewscore.class);
+        final Intent viewavg = new Intent(this, viewaverage.class);
         String user = mAuth.getCurrentUser().getEmail().toString();
         TextView welcome = (TextView) findViewById(R.id.welcome);
         welcome.setText("Welcome "+user);
@@ -41,6 +42,14 @@ public class loginsuccess extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(views);
+            }
+        });
+
+        Button viewaverage = (Button) findViewById(R.id.averagescore);
+        viewaverage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(viewavg);
             }
         });
     }

@@ -29,10 +29,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
-        final TextView forgotpassword = (TextView) findViewById(R.id.forgotpassword);
+        final Button forgotpassword = (Button) findViewById(R.id.forgotpassword);
         final Intent forgot = new Intent(this, forgotpassword.class);
         final Intent create = new Intent(this, createaccount.class);
-        TextView createaccount = (TextView) findViewById(R.id.createaccount);
+        Button createaccount = (Button) findViewById(R.id.createaccount);
         forgotpassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
